@@ -3,7 +3,7 @@ import java.util.Arrays;
 // Swap the adjacent element and move the largest value to the last after each iteration
 
 public class BubbleSort {
-  public static int[] bubbleSort(int[] arr){
+  public static void bubbleSort(int[] arr){
 
     for(int i=0; i< arr.length; i++){
 
@@ -17,12 +17,12 @@ public class BubbleSort {
       }
       
     }
-    return arr;
   }
 
   public static void main(String[] args){
     int[] arr = {7, 4, 1, -2, 5, 3};
-    arr = bubbleSort(arr);
+    System.out.println(Arrays.toString(arr));
+    bubbleSort(arr);
     System.out.println(Arrays.toString(arr));
   }
 }

@@ -3,7 +3,7 @@ import java.util.Arrays;
 // Swap the smallest value to the first element and repeat for each iteration
 
 public class SelectionSort {
-  public static int[] selectionSort(int[] arr){
+  public static void selectionSort(int[] arr){
 
     for(int i=0; i< arr.length; i++){
 
@@ -21,12 +21,12 @@ public class SelectionSort {
         arr[minIndex] = temp;
       }
     }
-    return arr;
   }
 
   public static void main(String[] args){
     int[] arr = {7, 4, 1, -2, 5, 3};
-    arr = selectionSort(arr);
+    System.out.println(Arrays.toString(arr));
+    selectionSort(arr);
     System.out.println(Arrays.toString(arr));
   }
 }

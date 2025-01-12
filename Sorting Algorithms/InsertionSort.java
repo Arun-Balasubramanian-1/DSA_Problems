@@ -4,7 +4,7 @@ import java.util.Arrays;
 // Element is inserted into the sorted list from left
 
 public class InsertionSort {
-  public static int[] insertionSort(int[] arr) {
+  public static void insertionSort(int[] arr) {
     for (int i = 1; i < arr.length; i++) {
       int value = arr[i];
       int j = i - 1;
@@ -18,12 +18,12 @@ public class InsertionSort {
       // Place the current value in its correct position
       arr[j + 1] = value;
     }
-    return arr;
   }
 
   public static void main(String[] args) {
     int[] arr = { 7, 4, 1, -2, 5, 3 };
-    arr = insertionSort(arr);
+    System.out.println(Arrays.toString(arr));
+    insertionSort(arr);
     System.out.println(Arrays.toString(arr));
   }
 }
