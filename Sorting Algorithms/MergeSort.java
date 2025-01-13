@@ -10,6 +10,9 @@ public class MergeSort {
     int[] temp = new int[high-low+1];
     int index = 0;
 
+    // Here we are merging two sorted sub arrays and placing it in temp array
+    // 1st array (low to mid)
+    // 2nd array (mid+1 to high)
     while((left <= mid) && (right <= high)){
       if(arr[left] <= arr[right]){
         temp[index] = arr[left];
@@ -33,6 +36,7 @@ public class MergeSort {
       index++;
     }
     
+    // Assign the values from merged sorted temp array back to the actual array
     for(int i=low; i<=high; i++){
       arr[i] = temp[i-low];
     }
