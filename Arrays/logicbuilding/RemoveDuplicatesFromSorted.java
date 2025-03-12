@@ -1,3 +1,5 @@
+package arrays.logicbuilding;
+
 import java.util.Arrays;
 
 public class RemoveDuplicatesFromSorted {

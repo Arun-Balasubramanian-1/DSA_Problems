@@ -1,3 +1,4 @@
+package arrays.logicbuilding;
 
 public class MissingNumber {
 
