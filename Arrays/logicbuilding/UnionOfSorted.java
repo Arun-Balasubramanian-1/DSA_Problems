@@ -56,7 +56,6 @@ public class UnionOfSorted {
   }
 
   public static void main(String[] var0) {
-    int[] var1 = new int[] { 0, 1, 2, 4, 5, 6 };
 
     int[] nums1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     int[] nums2 = { 2, 3, 4, 4, 5, 11, 12 };
