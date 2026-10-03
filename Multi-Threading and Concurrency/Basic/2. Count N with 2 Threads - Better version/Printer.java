@@ -12,7 +12,7 @@ class Printer implements Runnable {
     public void run(){
         while(true) {
             synchronized (simpleCounter){
-                while (simpleCounter.getCounter() % 2 != threadId) {
+                while (simpleCounter.getCounter() % 2 != threadId && simpleCounter.getCounter() <= simpleCounter.getMaxValue()) {
                     try {
                         simpleCounter.wait();
                     } catch (InterruptedException e) {

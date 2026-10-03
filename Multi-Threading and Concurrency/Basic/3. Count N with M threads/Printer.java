@@ -15,8 +15,7 @@ class Printer implements Runnable {
     public void run() {
         while (true) {
             synchronized (simpleCounter) {
-                // System.out.println(isLastThread + " " + result + " " + threadId + " " + threadsCount + " " + Thread.currentThread().getName());
-                while (true) {
+                while (simpleCounter.getCounter() <= simpleCounter.getMaxValue()) {
                     int result = simpleCounter.getCounter() % threadsCount;
                     result = (result == 0) ? threadsCount : result;
                     if (result != threadId) {

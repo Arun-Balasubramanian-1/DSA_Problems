@@ -10,7 +10,7 @@ class EvenPrinter implements Runnable {
     public void run(){
         while(true) {
             synchronized (simpleCounter){
-                if (simpleCounter.getCounter() % 2 != 0) {
+                if (simpleCounter.getCounter() % 2 != 0 && simpleCounter.getCounter() <= simpleCounter.getMaxValue()) {
                     try {
                         simpleCounter.wait();
                     } catch (InterruptedException e) {
